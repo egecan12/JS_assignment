@@ -34,11 +34,11 @@ var text = document.querySelector('#text');
 
 
 // my arrays
-var array1 = ['Micheal Jordan','justin Bieber','frankestein','Jon Snow','Ricky Martin'];
-var array2 = ['ate','danced with','tickled','went to fishing with','beaten'];
-var array3 = ['a funny','an enourmous','a moldy','a old','a bloody'];
-var array4 = ['fish',' lady','polar bear','donkey','bigmac'];
-var array5 = ['on the bed','in bathroom','on my dream',' in parallel universe','in Casablanca'];
+var array1 = ['Micheal Jordan','Justin Bieber','Frankestein','Jon Snow','Ricky Martin','Harry Potter','Mel Gibson','Mike tyson'];
+var array2 = ['ate','danced with','kissed','went to fishing with','hire','went shopping with','went for dinner with','married','has beaten','did not talk to'];
+var array3 = ['a funny','an enourmous','a moldy','a chipped','a bloody','a naughty','a fat','a dead','stinky','antibacterial'];
+var array4 = ['fish',' lady','polar bear','donkey','bigmac','monkey brain','noodle','zombie','timbits','darklord','Pickles']
+var array5 = ['on the bed','in bathroom','on my dream',' in parallel universe','in Casablanca','in Londons back streets','in Endonesia','in Washington Dc '];
 
 
 
