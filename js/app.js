@@ -25,7 +25,7 @@ var button2=document.querySelector('#button2');
 var button3=document.querySelector('#button3');
 var button4=document.querySelector('#button4');
 var button5=document.querySelector('#button5');
-var randomize=document.querySelector('#button6');
+var answerButton=document.querySelector('#button6');
 var resetButton=document.querySelector('#button7');
 
 var text = document.querySelector('#text');
@@ -56,9 +56,8 @@ var randomWord4  = random(array4);
 var randomWord5  = random(array5);
 
 
-var key;
+var story=''; 
  
-
 var array6 = [randomWord1,randomWord2,randomWord3,randomWord4,randomWord5] //I created this array to have a random array story
 
 
@@ -71,35 +70,39 @@ var array6 = [randomWord1,randomWord2,randomWord3,randomWord4,randomWord5] //I c
 button1.onclick = function() {
 	textToSpeak=random(array1);
 	speakNow(textToSpeak);
+	story=story+' '+textToSpeak+'';
 }
 
 button2.onclick = function() {
 	textToSpeak=random(array2);
 	speakNow(textToSpeak);
-}
+	story=story+' '+textToSpeak+'';}
 
 button3.onclick = function() {
 	textToSpeak=random(array3);
 	speakNow(textToSpeak);
+	story=story+' '+textToSpeak+'';
 }
 
 button4.onclick = function() {
 	textToSpeak=random(array4);
 	speakNow(textToSpeak);
+	story=story+' '+textToSpeak+'';
 }
 
 button5.onclick = function() {
 	textToSpeak=random(array5);
 	speakNow(textToSpeak);
+	story=story+' '+textToSpeak+'';
 }
 
-//this is the random story
-randomize.onclick = function() {
-	textToSpeak=array6;
-	speakNow(textToSpeak);
+//this is the speaking and showing the answer 
+answerButton.onclick = function() {
+	
+	speakNow(story);
 	
 	// to get the text
-	text.innerHTML=array6;
+	text.innerHTML=story;
 
 	
 
