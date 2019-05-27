@@ -56,11 +56,11 @@ var randomWord4  = random(array4);
 var randomWord5  = random(array5);
 
 
-var story=''; 
+var story =''; 
  
 var array6 = [randomWord1,randomWord2,randomWord3,randomWord4,randomWord5] //I created this array to have a random array story
 
-
+var key=0;
 
 /* Event Listeners
 -------------------------------------------------- */
@@ -70,39 +70,77 @@ var array6 = [randomWord1,randomWord2,randomWord3,randomWord4,randomWord5] //I c
 button1.onclick = function() {
 	textToSpeak=random(array1);
 	speakNow(textToSpeak);
-	story=story+' '+textToSpeak+'';
+	
+	
+	if (key == 0){
+
+	
+		story=textToSpeak+'';
+	
+	 }
+	
+	 else{
+		story=story+' '+textToSpeak+'';
+	 }
+	
+
+
+	 key=1;
 }
 
 button2.onclick = function() {
 	textToSpeak=random(array2);
 	speakNow(textToSpeak);
-	story=story+' '+textToSpeak+'';}
+	story=story+' '+textToSpeak+'';
+	key=1;
+
+	
+}
 
 button3.onclick = function() {
 	textToSpeak=random(array3);
 	speakNow(textToSpeak);
 	story=story+' '+textToSpeak+'';
+	key=1;
 }
 
 button4.onclick = function() {
 	textToSpeak=random(array4);
 	speakNow(textToSpeak);
 	story=story+' '+textToSpeak+'';
+	key=1;
 }
 
 button5.onclick = function() {
 	textToSpeak=random(array5);
 	speakNow(textToSpeak);
 	story=story+' '+textToSpeak+'';
+	key=1;
 }
 
 //this is the speaking and showing the answer 
 answerButton.onclick = function() {
 	
+ if (key == 0){
+
+	
+	alert('Please pick some words');
+	document.location.reload(true);
+
+ }
+
+ else{
+	
 	speakNow(story);
 	
 	// to get the text
+	
 	text.innerHTML=story;
+ }
+
+
+
+
 
 	
 
@@ -111,8 +149,8 @@ answerButton.onclick = function() {
 
 //reset button 
 resetButton.onclick = function() {
-	text.innerHTML="";
-	textToSpeak = "";	
+	
+	
 	document.location.reload(true);
 }
 
